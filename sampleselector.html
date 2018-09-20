@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+ 
+  <body>
+    
+      <button onclick="aloha()">Button</button>
+    
+    <ul>
+      <li>Start</li>
+    </ul>
+    
+    <script>
+      function aloha() {
+        var ulTag = document.getElementsByTagName('ul')[0];
+        var newItem = document.createElement('li');
+        ulTag.appendChild(newItem);
+        var newText = document.createTextNode("Aloha");
+        newItem.appendChild(newText);
+        document.body.appendChild(ulTag);
+      }
+      
+    </script>
+    
+  </body>
+</html>
