@@ -1,0 +1,26 @@
+<html>
+
+  <body>
+    
+    <ul>
+      
+    </ul>
+    
+    <script>
+      
+      var arr = ["Apple", "Banana", "Grapes"];
+      
+      for (var i = 0; i < arr.length; i++) {
+        var newItem = document.createElement("li");
+        var newText = document.createTextNode(arr[i]);
+        newItem.appendChild(newText);
+        var ulTag = document.getElementsByTagName("ul")[0];
+        ulTag.appendChild(newItem);
+        document.body.appendChild(ulTag);
+      }
+      
+    </script>
+    
+  </body>
+  
+</html>
