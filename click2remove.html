@@ -1,0 +1,45 @@
+<html>
+
+  <body>
+    
+    <ol></ol>
+    
+    <select id="people"></select>
+    <button onclick="remove(), window.open('https://www.telegraph.co.uk/content/dam/PortalPictures/GHANA858-xlarge.jpg')">Explode</button>
+    
+   <script>
+     
+     var arr = ["Person One", "Person Two", "Person Three"];
+     var select = document.getElementById('people');
+     function populate() {
+       for(var i = 0;  i < arr.length; i++) {
+         var opt = i + 1;
+         var elem = document.createElement('option');
+         elem.textContent = opt;
+         elem.value = opt;
+         select.appendChild(elem);
+         
+         //i want to populate the ordered list
+         var li = document.createElement('li');
+         var newText = document.createTextNode(arr[i]);
+         li.appendChild(newText);
+         var ol = document.getElementsByTagName('ol')[0];
+         ol.appendChild(li);
+         
+       }
+     }
+     
+     function remove() {
+       var sel = document.getElementById('people').value;
+       var li = document.getElementsByTagName('li')[sel-1];
+       var parent = li.parentNode;
+       parent.removeChild(li);
+     }
+     
+   </script>
+    
+    <script>populate()</script>
+    
+  </body>
+  
+</html>
