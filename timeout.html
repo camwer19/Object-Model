@@ -1,0 +1,19 @@
+<html>
+  <body>
+    <h1 id="placeHolder"></h1>
+    
+    <script>
+      //This is the main function where I wrap my timeout
+      function sayHello() {
+        var rand = Math.floor(Math.random() * (15000 - 4000) + 4000);
+        //I will now create a timeout function with a five second delay
+        setTimeout(function(){
+          //The code goes here. I will write the word hello to the screen
+          document.getElementById('placeHolder').innerHTML = "Hello";
+        },rand);
+      }
+      
+    </script>
+    <script>sayHello()</script>
+  </body>
+</html>
